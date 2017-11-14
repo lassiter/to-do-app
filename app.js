@@ -2,6 +2,12 @@ function onReady () {
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
+  const rmvToDoForm = document.getElementById('rmvToDoForm');
+  function removeItem(){
+    var child = document.toDoList.querySelector('option:checked');
+    var parent = document.toDoList;
+    parent.removeChild(child);
+  };
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
     // get the text
@@ -27,7 +33,7 @@ function onReady () {
 
     // empty the input
     newToDoText.value = '';
-
+    removeItem();
   });
 };
 window.onload = function() {
