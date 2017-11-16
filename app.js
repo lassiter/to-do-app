@@ -29,6 +29,11 @@ function onReady () {
 
     //empty the input
     newToDoText.value = '';
+
+    checkbox.onclick = function (){
+      let parent = this.parentNode;
+      this.parentNode.parentNode.removeChild(parent);
+    };
   });
 };
 window.onload = function() {
