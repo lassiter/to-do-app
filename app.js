@@ -3,16 +3,6 @@ function onReady () {
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
   const rmvToDoForm = document.getElementById('rmvToDoForm');
-<<<<<<< HEAD
-  function removeItem(){
-    var child = document.toDoList.querySelector('option:checked');
-    var parent = document.toDoList;
-    parent.removeChild(child);
-  };
-=======
-  const toggledList = document.querySelectorAll('');
-
->>>>>>> 5c9e83d
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -39,10 +29,6 @@ function onReady () {
 
     //empty the input
     newToDoText.value = '';
-<<<<<<< HEAD
-    removeItem();
-=======
->>>>>>> 5c9e83d
   });
 };
 window.onload = function() {
