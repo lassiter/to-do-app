@@ -3,13 +3,19 @@ function onReady () {
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
   const rmvToDoForm = document.getElementById('rmvToDoForm');
+<<<<<<< HEAD
   function removeItem(){
     var child = document.toDoList.querySelector('option:checked');
     var parent = document.toDoList;
     parent.removeChild(child);
   };
+=======
+  const toggledList = document.querySelectorAll('');
+
+>>>>>>> 5c9e83d
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
+
     // get the text
     let title = newToDoText.value;
 
@@ -31,9 +37,12 @@ function onReady () {
     // attach the li to the ul
     toDoList.appendChild(newLi);
 
-    // empty the input
+    //empty the input
     newToDoText.value = '';
+<<<<<<< HEAD
     removeItem();
+=======
+>>>>>>> 5c9e83d
   });
 };
 window.onload = function() {
