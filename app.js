@@ -22,7 +22,7 @@ function onReady() {
     const newLi = document.createElement('li');
     const checkbox = document.createElement('input');
     const deleteButton = document.createElement('button')
-
+    deleteButton.id = toDo.id;
     deleteButton.textContent = "Delete"
     checkbox.type = "checkbox";
 
@@ -30,20 +30,15 @@ function onReady() {
     toDoList.appendChild(newLi);
     newLi.appendChild(checkbox);
     newLi.appendChild(deleteButton);
-      // working area start todo: get the id object to delete
     deleteButton.onclick = function (){
       let parent = this.parentNode;
-      let text = parent.textContent()
-      let linkedID = "???"
+      let linkedID = this.id;
       for(i = 0; i < toDos.length; i++) {
         if (toDos[i].id == linkedID) {
-          console.log(toDos[i].id);
-          delete toDos[i].id;
-          console.log(toDos[i].id);
+          delete toDos.splice(i,1);
         }
       }
       this.parentNode.parentNode.removeChild(parent);
-            // working area end
     }
   });
 }
